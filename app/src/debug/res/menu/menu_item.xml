@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.irdedehradun.MainActivity">
+
+
+    <item
+        android:id="@+id/action_import_excel"
+        android:orderInCategory="100"
+        android:title="@string/import_excel"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/import_asset_excel"
+        android:orderInCategory="100"
+        android:title="@string/import_asset_data"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_exit"
+    android:orderInCategory="100"
+    android:title="@string/exit"
+        android:visible="false"
+    app:showAsAction="never" />
+</menu>

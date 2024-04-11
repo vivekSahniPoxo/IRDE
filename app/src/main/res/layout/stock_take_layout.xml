@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/m_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_stock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <!-- Your content goes here -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="2"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="18dp">
+
+                <TextView
+
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fileno"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_file_no"
+                    android:layout_width="124dp"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="@color/light_gray"/>
+
+                <TextView
+                    android:id="@+id/im_add"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/txt_background"/>
+
+
+                <TextView
+                    android:id="@+id/im_minimize"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:gravity="center"
+                    android:text="-"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/txt_background"/>
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="2"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="File Name:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_file_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="-----"
+                    android:textColor="@color/light_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="1"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quantity_nos"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_quantity_nos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_issue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="1"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:id="@+id/tv_issue_heading"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tender Op Date:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_tender_opening_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_issue_to"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="1"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:id="@+id/tv_isseud_to_heading"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cost(INR):"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tv_file_closing_date_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="File Closing Date:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_file_closing_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bidding_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Bidding Mode:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_bidding_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/project_no_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Project No:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_project_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mmg_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="MMG:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_mmg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tender_No_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Project No:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_tender_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rfidNo_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="RFID No:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_rfid_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pdc_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="PDC:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_pdc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/officer_name_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Officer Name:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_officer_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/divi_head_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="1"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Div Head Name:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_div_head_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/mmg_staff_name_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="MMG Staff Name"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_mmg_staff_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/fill_color_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="File Color:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_file_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tel_no_1_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="18dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tel No1:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_tel_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-----"
+                    android:textSize="14sp"
+                    android:textColor="@color/light_gray"/>
+            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:id="@+id/tel_no2_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="1"
+                                android:visibility="gone"
+                                android:layout_marginBottom="6dp"
+                                android:layout_marginStart="18dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tel No2:"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"/>
+
+                                <TextView
+                                    android:id="@+id/tv_telNo2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-----"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/light_gray"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tel_no3_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="1"
+                                android:visibility="gone"
+                                android:layout_marginBottom="6dp"
+                                android:layout_marginStart="18dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tel No3:"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"/>
+
+                                <TextView
+                                    android:id="@+id/tv_tel_no3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-----"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/light_gray"/>
+                            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Poxo</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="write_fail">Write Failed</string>
+    <string name="read_fail">Read Failed</string>
+    <string name="set_lock">Lock</string>
+    <string name="set_epc">EPC</string>
+    <string name="set_password">Password</string>
+    <string name="dialog_module_none">Module does not exist</string>
+    <string name="low_power">Low power UHF is forbidden</string>
+    <string name="high_temp">High temperature UHF is forbidden</string>
+    <string name="identify">Identify</string>
+    <string name="search">Search</string>
+    <string name="inventory">Inventory</string>
+    <string name="crd">Crd:</string>
+    <string name="fileno">FileNo:</string>
+    <string name="import_excel">Import File Data</string>
+    <string name="exit">Exit</string>
+    <string name="import_asset_data">Import Asset Data</string>
+    <string name="audit">Audit Asset</string>
+    <string name="asset_audit_inventory">Asset Audit Inventory</string>
+    <string name="total">Total:</string>
+    <string name="found">Found:</string>
+    <string name="not_found">Not Found:</string>
+    <string name="quantity_nos">Quantity NOS:</string>
+    <string name="file_inventory">File Inventory</string>
+    <string name="enter_fname_or_fno">Enter File Name or File No..</string>
+</resources>
